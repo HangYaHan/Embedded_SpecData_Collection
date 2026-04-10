@@ -1,0 +1,26 @@
+{
+  "run_id": "run_20260410_001",
+  "data_root": "./data",
+  "timeout": {
+    "server_recv_ms": 5000,
+    "sensor_ms": 2000,
+    "send_ack_ms": 1000
+  },
+  "network": {
+    "listen_ip": "0.0.0.0",
+    "listen_port": 5000,
+    "max_connections": 1
+  },
+  "sensor": {
+    "sensor_save_dir": "./data/sensor",
+    "sensor_policy": "single_snapshot",
+    "sample_rate_hz": 50,
+    "sample_window_ms": 200,
+    "format": "csv"
+  },
+  "reconcile": {
+    "strict_cycle_order": true,
+    "strict_counter_check": true
+  },
+  "log_path": "./data/logs/slave.log"
+}

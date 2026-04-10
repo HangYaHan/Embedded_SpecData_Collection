@@ -1,0 +1,37 @@
+{
+  "run_id": "run_20260410_001",
+  "total_cycles": 1000,
+  "retry_max": 3,
+  "stop_on_hard_fail": true,
+  "data_root": "./data",
+  "timeout": {
+    "serial_ms": 1000,
+    "spectrum_ms": 5000,
+    "ack_ms": 2000,
+    "connect_ms": 2000
+  },
+  "master": {
+    "serial_port": "COM3",
+    "serial_baudrate": 115200,
+    "spectrum_save_dir": "./data/spectrum",
+    "ocean_integration_time_ms": 100,
+    "manifest_save_dir": "./data/manifest",
+    "log_path": "./data/logs/master.log"
+  },
+  "slave": {
+    "slave_ip": "192.168.1.20",
+    "slave_port": 5000
+  },
+  "led_strategy": {
+    "mode": "random",
+    "seed": 42,
+    "table_path": "./config/led_table.csv",
+    "channels": 8,
+    "min_value": 0,
+    "max_value": 255
+  },
+  "reconcile": {
+    "file_naming": "by_cycle_id",
+    "strict_counter_check": true
+  }
+}
